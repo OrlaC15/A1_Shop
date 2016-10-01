@@ -20,10 +20,13 @@ class Shop
       total += items.count_products
     end
   end
-
+  def number_of_products
+    @items.count
+  end
   def average_products
     @items.inject(0) do |total, items|
-      total += items.average_product_price
+      total += items.gross_price/number_of_products
+
     end
   end
 

@@ -19,13 +19,8 @@ class Product
   end
 
   def average_product_price
-    @average= gross_price/3
-  end
+    @average= gross_price
 
-  def number_of_products
-    @name.each do |line|
-      @products+= line.to_i
-end
   end
 
   def compute_total_value
