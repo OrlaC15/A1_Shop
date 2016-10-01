@@ -15,10 +15,15 @@ class Main
 
     shop.add product
   end
-  shop.sort!
-  print shop
 
-  
+
+
+  puts shop.to_s + "\n"
+  puts shop.total_products
+ puts "Total Value in the shop: #{shop.total_value}"
+  #put shop.to_s_average
+  # puts "total tax paid is #{shop.total_tax}"
+  #  puts "Total quanity of items: #{shop.quantity}%"
 end
 
 
