@@ -10,29 +10,36 @@ class Product
 
   end
 
-
   def net_price
     @net_price
-    end
+  end
+
   def gross_price
     @gross_price = @net_price * 1.2
-
   end
+
+  def average_product_price
+    @average= gross_price/3
+  end
+
+  def number_of_products
+    @name.each do |line|
+      @products+= line.to_i
+end
+  end
+
   def compute_total_value
     @value= @net_price * @count
   end
-def count_products
-  @total_products = 0.0
 
-   @total_products = @count
-end
+  def count_products
+    @total_products = 0.0
+    @total_products = @count
+  end
 
   def to_s
-    "#{@name}  net_price #{@net_price}  and quatity  #{@count}"
-    end
-
-  def total_quantity
-    " Total quatity in shop is  #{compute_total_value}"
+    "#{@name}  €#{gross_price}"
   end
+
 
 end
