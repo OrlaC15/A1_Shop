@@ -1,25 +1,27 @@
-
+require_relative 'product.rb'
 class Shop
 
-  def initialize name, net_price, count
-    @name, @net_price, @count = name, net_price, count
-
+  def initialize
+    @items = []
   end
-  def total
-    @count.each { |val| val.inspect }
 
+  def add items
+    @items.push items
   end
-  def read
-    IO.foreach('shop.txt') do |line|
-      data = line.split
 
-      name = data[0]
-      price = data[1].to_f
-      count = data[2].to_i
+  def sort!
+    @items.sort!
+  end
 
-      print data
-
+  def to_s
+    @items.inject("") do |str, items|
+      str += items.to_s + "\n"
     end
+  end
+
+ 
 
   end
-  end
+
+
+
