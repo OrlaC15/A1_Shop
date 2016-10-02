@@ -15,7 +15,8 @@ class Main
 
     shop.add product
   end
-  
+
+
   puts shop.to_s+ "\n"
 
   puts "Total Value in the shop: €#{shop.total_value}"

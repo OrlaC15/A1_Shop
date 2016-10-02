@@ -15,7 +15,7 @@ class Product
   end
 
   def gross_price
-    @gross_price = @net_price * 1.2
+    @gross_price = @net_price *(100 +VAT_RATE)/100
   end
 
   def average_product_price
@@ -32,9 +32,12 @@ class Product
     @total_products = @count
   end
 
+
   def to_s
     "#{@name}  €#{gross_price}"
   end
-
+  def sorting!
+    @names.sort!
+  end
 
 end

@@ -1,0 +1,14 @@
+Orla Cullen 14708689
+
+
+Part 1:each product name with its gross price, in alphabetical order
+Part 2:the total net value of the items in the shop,
+Part 3: the average gross price of a product in the shop.
+Part 4: add testfiles
+
+ Part 1 :works corectly i.e each product name with gross price   but it does not sort  the data in
+         alphabetical order  everytime i tried to implement  this it crashed
+ Part 2 : works as expected
+ Part 3 : works as expected
+ Part 4 : working on tests
+
