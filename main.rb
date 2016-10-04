@@ -16,6 +16,7 @@ class Main
     shop.add product
   end
 
+  shop.sorting!
 
   puts shop.to_s+ "\n"
 

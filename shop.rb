@@ -1,5 +1,6 @@
 require_relative 'product.rb'
 class Shop
+  include Comparable
 
   def initialize
     @items = []
@@ -17,7 +18,7 @@ class Shop
 
   def total_products
     @items.inject(0) do |total, items|
-      total += items.count_products
+      total += items.count
     end
   end
 
@@ -32,15 +33,17 @@ class Shop
     end
   end
 
+
   def total_value
     @items.inject(0) do |total, items|
       total += items.compute_total_value
     end
   end
 
+  def sorting!
+    @items.sort! { |x, y| x.name <=> y.name }
+  end
 end
-
-
 
 
 
