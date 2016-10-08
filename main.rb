@@ -1,7 +1,6 @@
 require_relative 'shop.rb'
 require_relative 'product.rb'
 
-
 class Main
 
   shop = Shop.new

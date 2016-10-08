@@ -1,6 +1,5 @@
 require_relative 'product.rb'
 class Shop
-  include Comparable
 
   def initialize
     @items = []
@@ -10,30 +9,29 @@ class Shop
     @items.push items
   end
 
+#displays the items
   def to_s
     @items.inject("") do |str, items|
-      str += items.to_s + "\n"
+      str += items.to_display + "\n"
     end
   end
 
+# gets the total  amount of products   to compute  total value in shop
   def total_products
     @items.inject(0) do |total, items|
       total += items.count
     end
   end
 
-  def number_of_products
-    @items.count
-  end
-
+#  calls the gross price  of each product adds  them then divides by the number of products
   def average_products
     @items.inject(0) do |total, items|
-      total += items.gross_price/number_of_products
+      total += items.gross_price/@items.count
 
     end
   end
 
-
+# computes the net price by the quantity and adds the values together
   def total_value
     @items.inject(0) do |total, items|
       total += items.compute_total_value

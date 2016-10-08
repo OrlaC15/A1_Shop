@@ -13,22 +13,23 @@ class Product
 
   end
 
+#returns net price
   def net_price
     @net_price
   end
 
-#def name
-#@name
-#end
+#return the gross price
   def gross_price
     @gross_price = @net_price *(100 +VAT_RATE)/100
   end
 
+#returns the ttal value in shop
   def compute_total_value
     @value= @net_price * @count
   end
 
-  def to_s
+#displays
+  def to_display
     "#{@name}  €#{gross_price}"
   end
 
