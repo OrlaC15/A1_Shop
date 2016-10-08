@@ -2,23 +2,26 @@ require 'test/unit'
 
 class ShopTest < Test::Unit::TestCase
 
-  # Called before every test method runs. Can be used
-  # to set up fixture information.
+
   def setup
-    Shop.new.add test
+    @array = %w[ Scarf Bag Shoes ]
+  end
+
+  def test_one
+    array = %w[ Scarf Bag Shoes ]
+    assert_send([array, :include?, "Shoes"])
 
   end
 
-  # Called after every test method runs. Can be used to tear
-  # down fixture information.
-
-  def teardown
-    # Do nothing
+  def test_two
+    assert_instance_of String, 'Mary'
   end
 
-  # Fake test
-  def test_fail
+  def test_three
+    assert_instance_of Array, @array
+  end
 
-    fail('Not implemented')
+  def test_four
+    File.exist?('shop.txt')
   end
 end

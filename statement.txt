@@ -6,8 +6,11 @@ Part 2:the total net value of the items in the shop,
 Part 3: the average gross price of a product in the shop.
 Part 4: add testfiles
 
- Part 1 :works corectly 
+ Part 1 :works corectly
  Part 2 : works as expected
  Part 3 : works as expected
- Part 4 : working on tests
+ Part 4 : Some tests have been added  was trying to put in
+           a test to sort an array but i couldnt get it to implement properly
+
+
 
