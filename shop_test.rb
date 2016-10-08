@@ -9,7 +9,7 @@ class ShopTest < Test::Unit::TestCase
 
   def test_one
     array = %w[ Scarf Bag Shoes ]
-    assert_send([array, :include?, "Shoes"])
+    assert_send([array, :include?, 'Shoes'])
 
   end
 

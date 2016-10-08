@@ -5,13 +5,13 @@ class Shop
     @items = []
   end
 
-  def add items
+  def add(items)
     @items.push items
   end
 
 #displays the items
   def to_s
-    @items.inject("") do |str, items|
+    @items.inject('') do |str, items|
       str += items.to_display + "\n"
     end
   end

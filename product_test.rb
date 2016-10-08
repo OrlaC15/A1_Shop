@@ -15,14 +15,14 @@ class ProductTest < Test::Unit::TestCase
 
   def test_one
     value =@net_price*(100+VAT_RATE)/100
-    assert_equal(120, value, "The value is NoT equal")
+    assert_equal(120, value, 'The value is Not equal')
 
   end
 
   def test_two
 
     value =@net_price*@count
-    assert_equal(1000, value, "The value is Not equal")
+    assert_equal(1000, value, 'The value is Not equal')
 
   end
 
